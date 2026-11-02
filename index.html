@@ -897,6 +897,14 @@ function doPost(e) {
 
         calculateAutoFields();
     }
+    function resetDateFilter() {
+    // 1. Kosongkan nilai input tanggal Mulai dan Selesai
+    document.getElementById('startDate').value = '';
+    document.getElementById('endDate').value = '';
+    
+    // 2. Panggil renderTable() agar tabel memuat ulang data tanpa filter tanggal
+    renderTable();
+    }
 
     // ==========================================
     // 5. TABLE RENDERING, FILTERING & CHARTS
